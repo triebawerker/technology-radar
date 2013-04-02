@@ -28,3 +28,15 @@
   content: "";
   padding: 0;
 }
+
+#content {
+    margin-left: 100px;
+}
+table {
+    margin: 10px 0 30px 0;
+}
+
+td, th {
+    padding:4px;
+    border: 1px solid black;
+}
