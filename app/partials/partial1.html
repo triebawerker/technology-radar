@@ -10,18 +10,25 @@
       Sort by:
       <select ng-model="orderParameter">
         <option value="name">By name</option>
-        <option value="age">By evaluation</option>
-        <option value="age">By year</option>
+        <option value="evaluation">By evaluation</option>
+        <option value="year">By year</option>
       </select>
     </div>
     <div class="span5 offset1">
       <div id="technologies" ng-controller="ListController">
         <h2>Total number of technologies: {{technologies.length}}</h2>
-        <ul>
-          <li ng-repeat="technologie in technologies | filter:query | orderBy:orderParameter" class="tech">
-            {{technologie.name}} - {{technologie.evaluation }} - {{technologie.year}}
-          </li>
-        </ul>
+        <table>
+          <th>Name</th>
+          <th>Evaluation</th>
+          <th>Year</th>
+          <th>Tendency</th>
+          <tr ng-repeat="technologie in technologies | filter:query | orderBy:orderParameter" class="tech">
+            <td>{{technologie.name}}</td>
+            <td>{{technologie.evaluation | getValue:input}}</td>
+            <td>{{technologie.year}}</td>
+            <td>{{technologie.tendency}}</td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>

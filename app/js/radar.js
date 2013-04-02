@@ -1,3 +1,5 @@
+const EVALUATION  = ['adopt', 'trial', 'assess', 'hold'];
+
 var writeTable = function (propertyBag) {
     var technologiesElement = document.getElementById('technologies');
 
