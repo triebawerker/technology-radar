@@ -24,7 +24,7 @@
           <th>Tendency</th>
           <tr ng-repeat="technologie in technologies | filter:query | orderBy:orderParameter" class="tech">
             <td>{{technologie.name}}</td>
-            <td>{{technologie.evaluation | getValue:input}}</td>
+            <td>{{technologie.evaluation | getValue}}</td>
             <td>{{technologie.year}}</td>
             <td>{{technologie.tendency}}</td>
           </tr>
