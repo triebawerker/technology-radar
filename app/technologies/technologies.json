@@ -2,29 +2,36 @@
  {
   "_id": 1,
   "name": "nodejs",
-  "evaluation": "adopt",
+  "evaluation": "0",
   "year": "2011",
   "tendency": "increase"
  },
  {
   "_id": 2,
   "name": "angularjs",
-  "evaluation": "trial",
+  "evaluation": "1",
   "year": "2012",
   "tendency": "increase"
  },
  {
   "_id": 3,
   "name": "testacularjs",
-  "evaluation": "assess",
+  "evaluation": "3",
   "year": "2012",
   "tendency": "increase"
  },
  {
   "_id": 4,
   "name": "bootstrap",
-  "evaluation": "trial",
+  "evaluation": "1",
   "year": "2010",
   "tendency": "decrease"
- }
+ },
+    {
+        "_id":5,
+        "name": "php",
+        "evaluation": "2",
+        "year": "2010",
+        "tendency": "decrease"
+    }
 ]

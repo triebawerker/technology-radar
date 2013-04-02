@@ -4,11 +4,10 @@
 angular.module('myApp', ['myApp.filters',
                          'myApp.services',
                          'myApp.directives',
-                         'myApp.TechnologieServices',
                          'myApp.test'
                         ]).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: ListController});
-    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: MyCtrl2});
+    $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: RadarController});
     $routeProvider.otherwise({redirectTo: '/view1'});
   }]);

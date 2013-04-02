@@ -16,7 +16,7 @@ function ListController($scope) {
 */
 
 /*
-function ListController($scope, Technologies) {
+function ListController($scope, Technologies) {	
   $scope.technologies = Technologies.query();
   $scope.orderParameter = 'year';
 }
@@ -28,6 +28,9 @@ function ListController($scope, $http) {
   $scope.orderParameter = 'year';
 }
 
-function MyCtrl2() {
+function RadarController($scope, $http) {
+    $http.get('technologies/technologies.json').success(function(data) {
+        $scope.technologies = data;
+    });
 }
-//MyCtrl2.$inject = [];
+RadarController.$inject = ['$scope', '$http'];
