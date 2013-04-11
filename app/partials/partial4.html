@@ -1,0 +1,14 @@
+<h1>Create and edit Technologies</h1>
+
+<div id="technologies">
+    <h1>Add a new technology</h1>
+    <body>
+        <form novalidate class="simple-form"  ng-submit="onSubmit()" ng-controller="AddController">
+            Name: <input type="text" ng-model="technology.name" /><br />
+            Evaluation: <input type="text" ng-model="technology.evaluation" /><br />
+            Year: <input type="text" ng-model="technology.year" value="2010"/><br />
+            Tendency: <input type="text" ng-model="technology.tendency" value="down"/><br />
+            <input type="submit" value="save">
+        </form>
+    </body>
+</div>

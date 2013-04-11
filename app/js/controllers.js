@@ -21,16 +21,33 @@ function ListController($scope, Technologies) {
   $scope.orderParameter = 'year';
 }
 */
-function ListController($scope, $http) {
-  $http.get('technologies/technologies.json').success(function(data) {
-    $scope.technologies = data;
-  });
-  $scope.orderParameter = 'year';
+function ListController($scope, Technologies) {
+//  $http.get('technologies/technologies.json').success(function(data) {
+//    $scope.technologies = data;
+
+    $scope.technologies = Technologies.query();
+
+//  $scope.orderParameter = 'year';
 }
 
-function RadarController($scope, $http) {
-    $http.get('technologies/technologies.json').success(function(data) {
-        $scope.technologies = data;
-    });
+function RadarController($scope, Technologies) {
+//    $http.get('technologies/technologies.json').success(function(data) {
+//        $scope.technologies = data;
+//    });
+    $scope.technologies = Technologies.query();
 }
-RadarController.$inject = ['$scope', '$http'];
+RadarController.$inject = ['$scope', 'Technologies'];
+
+function DetailController($scope, Technologies, $routeParams) {
+    $scope.technology = Technologies.get( { id: $routeParams.id});
+}
+DetailController.$inject = ['$scope', 'Technologies', '$routeParams'];
+
+function AddController(Technologies, $scope, $location) {
+    $scope.onSubmit=function() {
+        var tech = new Technologies($scope.technology);
+        tech.$save(function(res, headers) {
+            $location.path('/detail/'+res._id);
+        });
+    };
+}

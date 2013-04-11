@@ -1,0 +1,18 @@
+<h1>Create and edit Technologies</h1>
+
+<div id="technologies" ng-controller="DetailController">
+    <table>
+        <th>Name</th>
+        <th>Evaluation</th>
+        <th>Year</th>
+        <th>Tendency</th>
+
+        <tr class="tech">
+            <td>{{technology.name}}</td>
+            <td>{{technology.evaluation | getValue}}</td>
+            <td>{{technology.year}}</td>
+            <td>{{technology.tendency}}</td>
+        </tr>
+    </table>
+    <a href="#/add">new technology</a>
+</div>
